@@ -32,6 +32,7 @@ public class Product {
     @Column(name = "image_url")
     private String imageUrl;
     private Float ratings;
+    @Column(name = "category_id")
     private Long categoryId;
 
 }

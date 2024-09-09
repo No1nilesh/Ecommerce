@@ -13,9 +13,9 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class ProductDTO {
-    private Long id;
-    private String name;
-    private String description;
+    private Long prodId;
+    private String prodName;
+    private String prodDesc;
     private BigDecimal price;
     private Float ratings;
     private String imageUrl;

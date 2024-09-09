@@ -20,8 +20,9 @@ public class ProductMapper {
 
     public static Product prodDtoToEntity(ProductDTO productDTO){
         Product product = new Product();
-        product.setProdId(productDTO.getId());
-        product.setProdName(product.getProdName());
+        product.setProdId(productDTO.getProdId());
+        product.setProdName(productDTO.getProdName());
+        product.setProdDesc(productDTO.getProdDesc());
         product.setPrice(productDTO.getPrice());
         product.setRatings(productDTO.getRatings());
         product.setImageUrl(productDTO.getImageUrl());
