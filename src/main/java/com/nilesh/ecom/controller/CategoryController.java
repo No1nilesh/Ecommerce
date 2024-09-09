@@ -23,6 +23,12 @@ public class CategoryController {
         return ResponseEntity.ok(categoryDTO);
     }
 
+    @GetMapping("/api/public/category/{id}")
+    public ResponseEntity<CategoryDTO> getCategoryById(@PathVariable(value = "id") Long categoryId){
+        CategoryDTO categoryDTO = categoryService.getCategoryById(categoryId);
+        return ResponseEntity.ok(categoryDTO);
+    }
+
     @PostMapping("/api/admin/category")
     public ResponseEntity<CategoryDTO> createCategory(@RequestBody CategoryDTO categoryDTO){
         CategoryDTO savedCategoryDTO =  categoryService.createCategory(categoryDTO);
